@@ -1,0 +1,1413 @@
+<html>
+
+<head>
+    <title>Pass Port Application Form</title>
+    <link rel="stylesheet" href="task2.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+    <script src="task2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background: linear-gradient(to bottom, #f4e2d8     0%, #ba5370  100%)" oncopy="return false"
+    oncut="return false" onpaste="return false">
+    <form action="submit.html" onsubmit="return checkForm();" method="post">
+        <div id="main" style="width:76%;  padding-left:12% ; padding-right:12%;">
+            <!-- Start nevbar Session -->
+            <div id="intro" style="border:1px solid  black;" class="myclass">
+                <label style="float:right">File Number (For Office Use Only)</label><br>
+                <!-- <input type="text"  style="float:right; width: 200px; margin:20px; " id="filenumber" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..?)\../g, '$1');" maxlength="12"> <br> -->
+                <input type="text" style="float:right; width: 200px; margin:20px; " id="filenumber"
+                    onkeypress="allowAlphaNumeric(event)" onkeyup="this.value = this.value.toUpperCase();"
+                    maxlength="12"> <br>
+                <!-- <input type="text"  style="float:right; width: 200px; margin:20px; text-transform: uppercase; " id="filenumber"  pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"    maxlength="12"> <br> -->
+                <br><br>
+                <div>
+                    <label for="" style="font-weight:bold; color:#003399">
+                        <center>
+                            <h1> GOVERNMENT OF INDIA, MINISTRY OF EXTERNAL AFFAIRS</h1>
+                        </center>
+                    </label>
+                    <label for="" style="font-weight:bold; color:#003399">
+                        <center>
+                            <h1>PASSPORT APPLICATION FORM </h1>
+                        </center>
+                    </label>
+                    <p>
+                        <center style="text-align: justify;">Please read the Passport Instruction Booklet carefully
+                            before filling the form. Fill this
+                            form in CAPITAL LETTERS
+                            using blue/ black ink ball point pen only. Furnishing of incorrect information/ suppression
+                            of
+                            information would
+                            lead to rejection of the application and would attract penal provisions as prescribed under
+                            the
+                            Passports Act,
+                            1967. Please produce your original documents at the time of submission of the form.
+                        </center>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <!-- End nevbar Session -->
+            <!-- Start Session-1 -->
+            <div>
+                <center><button onclick="myFunction()" class="button-34" style="width: 325px;">1 Service
+                        Required</button></center>
+            </div>
+            <div id="main1" style="display:none;">
+                <!-- <form action=""> -->
+                <div id="sec=1" style=" width: 80%; padding-left:12% ;">
+                    <fieldset class="myclass">
+                        <legend>
+                            <h3 style="background-color:#00ccff;">1. Servise required</h3>
+                        </legend>
+                        <div>
+                            <div>
+                                <!-- <td><input type="radio" name="1.1" id="1.1r" onchange="check()">Fresh Passport -->
+                                <label for=""><b> 1.1 Applying for</b></label>
+                                &ensp;
+                                <input type="radio" name="1.1" id="1.1" onclick="check()"> Fresh Passport
+                                <input type="radio" name="1.1" id="1.0.1" onclick="check()"> Re-issue of Passport
+                                <!-- <div style="padding-right: 20px; float:right; width:225px;" class="container-fluid">
+                                    <fieldset class="myclass" style="float:right; width:225px;  text-align: justify; border-radius: 25px;" class="form-group">
+                                        <p>Please paste your
+                                            unsigned recent colour
+                                            photograph with white
+                                            background of size
+                                            4.5cm X 3.5cm. [Not
+                                            needed for applicants
+                                            submitting the
+                                            application at Passport
+                                            Seva Kendra]
+                                        </p>
+                                            <input type="file" id="srpic" accept="image/x-png,image/gif,image/jpeg">
+                                    </fieldset>
+                                </div> -->
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b> 1.2 If re-issue, specify reason(s)</b></label><br><br>
+                                <input type="radio" name="1.2" id="1.2" disabled onchange="existing()">Validity Expired
+                                within 3 years/ Due to Expire
+                                <input type="radio" name="1.2" id="1.2.1" disabled onchange="existing()">Exhaustion of
+                                Pages
+                                <br>
+                                <input type="radio" name="1.2" id="1.2.2" disabled onchange="existing()">Validity
+                                Expired more than 3 years ago
+                                &emsp;&emsp; &ensp;
+                                <input type="radio" name="1.2" id="1.2.3" disabled onchange="existing()">Lost Passport
+                                <br>
+                                <input type="radio" name="1.2" id="1.2.4" disabled onchange="existing()">Change in
+                                Existing Personal Particulars
+                                &emsp;&emsp;&ensp;
+                                <input type="radio" name="1.2" id="1.2.5" disabled onchange="existing()">Damaged
+                                Passport
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b> 1.3 If change in existing personal particulars, specify
+                                        reason(s)</b></label>
+                                <br><br>
+                                <div style="padding-right: 40px; float:right; width:250px;">
+                                    <br>
+                                    <!-- <div style="padding-right: 5px; float:right; width:250px; height:70; ">
+                                        <p>Signature/ Left Hand Thumb
+                                            Impression of Illiterate
+                                            Applicant <br> and Minors who
+                                            cannot sign.
+                                        </p>
+                                        <input type="file" id="srsig" accept="image/x-png,image/gif,image/jpeg">
+                                    </div> -->
+                                </div>
+                                <input type="checkbox" name="1.3" id="1.3" disabled onclick="check()">Appearance &nbsp;
+                                <input type="checkbox" name="1.3" id="1.3.1" disabled
+                                    onclick="check()">Signature&ensp;&nbsp;
+                                <input type="checkbox" name="1.3" id="1.3.2" disabled onclick="check()">Given Name
+                                <input type="checkbox" name="1.3" id="1.3.3" disabled onclick="check()">Surname
+                                <br>
+                                <input type="checkbox" name="1.3" id="1.3.4" disabled onclick="check()">Date of Birth
+                                <input type="checkbox" name="1.3" id="1.3.5" disabled onclick="check()">Address &ensp;
+                                &nbsp;
+                                <input type="checkbox" name="1.3" id="1.3.6" disabled onclick="check()">Delete ECR&nbsp;
+                                <input type="checkbox" name="1.3" id="1.3.7" disabled onclick="check()"> Spouse Name
+                                <br>
+                                <input type="checkbox" name="1.3" id="cheoth" onclick="ShowHideDiv(this)" disabled
+                                    onclick="check()">Others, Please specify
+                                <br>
+                                <input type="text" placeholder="Others Reasons" class="text" id="other"
+                                    style="display: none;">
+                                <br>
+                                <br>
+                            </div>
+                            <div>
+                                <label for=""><b> 1.4 Type of Application</b></label>
+                                &emsp;&ensp; &nbsp;
+                                <input type="radio" name="1.4" id="1.4"> Normal
+                                &nbsp;&nbsp;
+                                <input type="radio" name="1.4"> Tatkaal
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b> 1.5 Type of Passport Booklet</b></label>
+                                <input type="radio" name="1.5" id="1.5"> 36 Pages
+                                <input type="radio" name="1.5"> 60 Pages
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b> 1.6 Validity Required</b></label>
+                                &emsp; &nbsp; &nbsp;&ensp; &nbsp;
+                                <input type="radio" name="1.6" id="1.6"> 10 Year
+                                &nbsp;
+                                <input type="radio" name="1.6"> Up to age 18
+                                <br>
+                                (For minors between 15 and 18 years)
+                            </div>
+                            <div>
+                                <div style=" width:225px; float: left;" class="container-fluid">
+                                    <fieldset class="myclass"
+                                        style=" width:225px;  text-align: justify; border-radius: 25px;"
+                                        class="form-group">
+                                        <p>Please paste your
+                                            unsigned recent colour
+                                            photograph with white
+                                            background of size
+                                            4.5cm X 3.5cm. [Not
+                                            needed for applicants
+                                            submitting the
+                                            application at Passport
+                                            Seva Kendra]
+                                        </p>
+                                        <input type="file" id="srpic" accept="image/x-png,image/gif,image/jpeg">
+                                    </fieldset>
+                                </div>
+                                <div style=" float: right; width:250px; height:70; ">
+                                    <p>Signature/ Left Hand Thumb
+                                        Impression of Illiterate
+                                        Applicant <br> and Minors who
+                                        cannot sign.
+                                    </p>
+                                    <input type="file" id="srsig" accept="image/x-png,image/gif,image/jpeg">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- </form> -->
+            </div>
+            <br>
+            <!-- End session-1 -->
+            <!-- Start Session-2 -->
+            <div>
+                <center><button onclick="myFunction2()" class="button-34" style="width: 325px;">2. Applicant
+                        Details</button></center>
+            </div>
+            <div id="main2" style="display:none;">
+                <!-- <form action=""> -->
+                <div id="sec=2" style=" width: 80%; padding-left:12% ;">
+                    <fieldset class="myclass">
+                        <legend>
+                            <h3 style="background-color:#00ccff;">2. Applicant Details</h3>
+                        </legend>
+                        <div>
+                            <div>
+                                <label for=""><b> 2.1 Applicant's Given Name </b></label>
+                                <br> <br>
+                                <input type="text" name="applicant name" placeholder="Applicant name" id="appname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                                &emsp;
+                                <input type="text" placeholder="Middle name" id="appmidname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                                &emsp;
+                                <input type="text" placeholder="Surname" id="appsurname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                            </div>
+                            <!-- </div> -->
+                            <br>
+                            <div>
+                                <label for=""><b>2.2 Are you known by any other names (aliases)?</b></label>
+                                &nbsp;
+                                <input type="radio" name="2.2" id="2.2">Yes
+                                <input type="radio" name="2.2">No
+                                <br>
+                                If yes, provide details in Column 1 of Supplementary Form
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.3 Have you ever changed your name?</b></label>
+                                &emsp;&emsp;&emsp;&emsp;&nbsp;
+                                <input type="radio" name="2.3" id="2.3">Yes
+                                <input type="radio" name="2.3">No
+                                <br>
+                                If yes, provide details in Column 2 of Supplementary Form
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.4 Date of Birth (DD-MM-YYYY)</b></label>
+                                <!-- &emsp;&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp; -->
+                                <input type="text" id="appdate" onblur="ValidateDOB()">
+                                <!-- <span class="error" id="lblError" style="background-color: red;"></span> -->
+                                <!-- <br /> -->
+                                <!-- <br /> -->
+                                <!-- <input type="button" id="btnValidate" value="Validate" onclick="return ValidateDOB()" /> -->
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.5 Place of Birth (Village or Town or City)</b></label>
+                                &emsp;&emsp;&emsp;
+                                <input type="text" placeholder="Enter Village" id="appvillage"
+                                    style="text-transform:uppercase" onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br>
+                                District (If born in India)
+                                <input type="text" placeholder="Enter District" id="appdis"
+                                    style="text-transform:uppercase" onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                &nbsp;
+                                State/ UT (If born in India)
+                                &ensp;
+                                <input type="text" placeholder="Enter State" id="appstate"
+                                    style="text-transform:uppercase" onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br> Region/Country &emsp;&emsp; &emsp;
+                                <input type="text" placeholder="Enter Country" id="appcoun"
+                                    style="text-transform:uppercase" onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br>
+                                (If born abroad) If born before 15/08/1947 in a place now in Pakistan or
+                                Bangladesh, write "Undivided India"
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.6 Gender</b></label>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                <input type="radio" name="2.6" id="2.6">Male &nbsp;
+                                <input type="radio" name="2.6">Female &ensp;
+                                <input type="radio" name="2.6">Transgender
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.7 Marital Status</b></label>
+                                &emsp;&emsp; &emsp;
+                                <input type="radio" name="2.7" id="2.7">Single
+                                <input type="radio" name="2.7">Married
+                                <input type="radio" name="2.7">Divorced
+                                <input type="radio" name="2.7">Widow/ Widower
+                                <input type="radio" name="2.7">Separated
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.8 Citizenship of India by</b></label>
+                                <input type="radio" name="2.8" id="2.8">Birth
+                                <input type="radio" name="2.8">Descent &nbsp;
+                                <input type="radio" name="2.8">Registration/ Naturalization
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.9 PAN (If available)</b></label>
+                                &emsp;&emsp;&ensp;
+                                <!-- <input type="text" placeholder="Enter PAN Number" id="apppan" maxlength="10"  pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"   style="text-transform: uppercase;"/> -->
+                                <input type="text" placeholder="Enter PAN Number" id="apppan"
+                                    onkeypress="allowAlphaNumeric(event)"
+                                    onkeyup="this.value = this.value.toUpperCase();" maxlength="10">
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.10 Voter ID (If available)</b></label>
+                                &nbsp;
+                                <!-- <input type="text" placeholder="Enter Voter ID" id="appvoter" maxlength="10"  pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"   style="text-transform: uppercase;"> -->
+                                <input type="text" placeholder="Enter Voter ID" id="appvoter" maxlength="10"
+                                    onkeypress="allowAlphaNumeric(event)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.11 Employment Type</b></label>
+                                <br>
+                                <input type="radio" name="2.11" id="2.11">PSU &emsp;
+                                <input type="radio" name="2.11">Government &emsp;
+                                <input type="radio" name="2.11">Statutory Body &emsp;
+                                <input type="radio" name="2.11">Retired Government Servant &emsp;
+                                <input type="radio" name="2.11">Separated &emsp;
+                                <input type="radio" name="2.11">Private &emsp; <br>
+                                <input type="radio" name="2.11">Student
+                                <input type="radio" name="2.11">Homemaker &emsp;
+                                <input type="radio" name="2.11">Not Employed &emsp;&nbsp;
+                                <input type="radio" name="2.11">Retired-Private Service &emsp;
+                                &emsp;&emsp;
+                                <input type="radio" name="2.11">Others &emsp;
+                                <br>
+                                <input type="radio" name="2.11">Owners, Partners & Directors of companies which are
+                                members of CII, FICCI & ASSOCHAM
+
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.12 If employed in Government/ Statutory Body/ PSU, specify
+                                        organization name</b></label>
+                                &nbsp;
+                                <!-- <input type="text" placeholder="Organization Name" id="apporg"  style="text-transform:uppercase" oninput="this.value = this.value.replace(/(\..?)\../g, '$1').replace(/[^a-z,A-Z.]/g, '');"> -->
+                                <input type="text" placeholder="Organization Name" maxlength="60" id="apporg"
+                                    onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.13 Is either of your parent (in case of minor)/ spouse, a government
+                                        servant?</b></label>
+                                &emsp;&ensp;
+                                <input type="radio" name="2.13" id="2.13"> Yes
+                                <input type="radio" name="2.13"> No
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.14 Educational Qualification</b></label>
+                                <br>
+                                <input type="radio" name="2.14" id="2.14"> 7th pass or less
+                                <input type="radio" name="2.14"> Between 8th and 9th Standard
+                                <input type="radio" name="2.14"> 10th pass and above
+                                <input type="radio" name="2.14"> Graduate and above
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.15 Are you eligible for Non-ECR category?</b></label>
+                                <input type="radio" name="2.15" id="2.15"> Yes
+                                <input type="radio" name="2.15"> No For details, see Column 2.15, section B of
+                                Instruction Booklet
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.16 Visible Distinguishing Mark</b></label>
+                                &nbsp;
+                                <!-- <input type="text" id="appdismark" onkeypress="return /[a-z ]/i.test(event.key)" onkeyup="this.value = this.value.toUpperCase();"> -->
+                                <select id="appdismark" style="width: 175px;">
+                                    <option>Head</option>
+                                    <option>Hair</option>
+                                    <option>Forehead</option>
+                                    <option>Temple</option>
+                                    <option>Face</option>
+                                    <option>Ear</option>
+                                    <option>Earlobe</option>
+                                    <option>Nose</option>
+                                    <option>Nostril</option>
+                                    <option>Cheek</option>
+                                    <option>Jaw</option>
+                                    <option>Mouth</option>
+                                    <option>Tooth-teeth</option>
+                                    <option>Tongue</option>
+                                    <option>Chin</option>
+                                    <option>Sideburn</option>
+                                    <option>Mustache</option>
+                                    <option>Beard</option>
+                                    <option>Neck</option>
+                                    <option>Hair</option>
+                                    <option>Eye</option>
+                                    <option>Eyebrow</option>
+                                    <option>Thumb</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>2.17 Aadhaar Number</b></label>
+                                &emsp;&emsp;&emsp;&emsp;&ensp;
+                                <!-- <input type="text" placeholder="Enter Aadhaar Number" id="appaadhaar" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..?)\../g, '$1');"  maxlength="12"> -->
+                                <input type="text" placeholder="Enter Aadhaar Number" id="appaadhaar" maxlength="12"
+                                    onkeypress="return validateNumber(event)">
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+                <!-- </form> -->
+            </div>
+            <br>
+            <!-- End Session-2 -->
+            <!-- Start Session-3 -->
+            <div>
+                <center><button onclick="myFunction3()" class="button-34" style="width: 325px;">3. Family
+                        Details</button></center>
+            </div>
+            <div id="main3" style="display:none;">
+                <!-- <form action=""> -->
+                <div id="sec=3" style=" width: 80%; padding-left:12% ;">
+                    <fieldset class="myclass">
+                        <legend>
+                            <h3 style="background-color:#00ccff;">3. Family Details</h3>
+                        </legend>
+                        <div>
+                            <div>
+                                <label for=""><b>3.1 Father's Given Name (Given Name means First name followed by Middle
+                                        name (If any)) (Initials not allowed)</b></label>
+                                <input type="text" placeholder="Father's name" id="famfname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                                &emsp;
+                                <input type="text" placeholder="Middle name" id="famfmname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                                &emsp;
+                                <input type="text" placeholder="Enter Surname" id="famfsname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>3.2 Mother's Given Name (Given Name means First name followed by Middle
+                                        name (If any)) (Initials not allowed)</b></label>
+
+                                <input type="text" placeholder="Mother's name" id="fammname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                                &emsp;
+                                <input type="text" placeholder="Middle name" id="fammmname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                                &emsp;
+                                <input type="text" placeholder="Enter Surname" id="fammsname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>3.3 Legal Guardian's Given Name (If applicable) (Initials not
+                                        allowed)</b></label>
+                                <br>
+                                <input type="text" placeholder="Guardian's name" id="famlname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                                &emsp;
+                                <input type="text" placeholder="Middle name" id="famlmname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                                &emsp;
+                                <input type="text" placeholder="Enter Surname" id="famlsname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>3.4 Spouse's Given Name (Given Name means First name followed by Middle
+                                        name (If any)) (Initials not allowed)</b></label>
+
+                                <input type="text" placeholder="Spouse's name" id="famsname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                                &emsp;
+                                <input type="text" placeholder="Middle name" id="famsmname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                                &emsp;
+                                <input type="text" placeholder="Enter Surname" id="famssname"
+                                    style="text-transform:uppercase" onkeyup="this.value = this.value.toUpperCase();"
+                                    onkeypress="return /[a-z]/i.test(event.key)" maxlength="500">
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>3.5 If applicant is minor, provide following details</b></label>
+                                <p>Parent's Passport Details (If passport has been applied for but not received, give
+                                    File Number)</p>
+
+                                Father/ Legal Guardian's File/ Passport Number
+                                &emsp; &nbsp; &nbsp;
+                                <input type="text" placeholder="Enter Number" maxlength="12"
+                                    onkeypress="allowAlphaNumeric(event)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br>
+                                Father/ Legal Guardian's Nationality, if not Indian
+                                &nbsp; &nbsp;&nbsp;
+                                <input type="text" onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br>
+                                Mother/ Legal Guardian's File/ Passport Number
+                                &emsp;&nbsp;&nbsp;
+                                <input type="text" placeholder="Enter Number" maxlength="12"
+                                    onkeypress="allowAlphaNumeric(event)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br>
+                                Mother/ Legal Guardian's Nationality, if not Indian
+                                &nbsp;&nbsp;
+                                <input type="text" onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- </form> -->
+            </div>
+            <br>
+            <!-- End Session-3 -->
+            <!-- Start Session-4 -->
+            <div>
+                <center><button onclick="myFunction4()" class="button-34" style="width: 325px;">4. Present Residential
+                        Address Details</button></center>
+            </div>
+            <div id="main4" style="display:none;">
+                <!-- <form action=""> -->
+                <div id="sec=4" style=" width: 80%; padding-left:12% ;">
+                    <fieldset class="myclass">
+                        <legend>
+                            <h3 style="background-color:#00ccff;">4. Present Residential Address Details</h3>
+
+                        </legend>
+                        <div>
+                            <div>
+                                <p>(Where applicant presently resides)</p>
+                                <label for=""><b>4.1 House No. and Street Name</b></label>
+                                <input type="text" placeholder="Enter Street name" id="prestr" maxlength="500"
+                                    onkeypress="allowAlphaNumericSpace(event)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br>
+                                Village or Town or City
+                                &emsp; &emsp; &emsp;
+                                <input type="text" placeholder="Enter City" id="precity"
+                                    onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br>
+                                District
+                                &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp;&emsp;&emsp;
+                                <input type="text" placeholder="Enter District" id="predis"
+                                    onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br>
+                                Police Station
+                                &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                                <input type="text" placeholder="Enter Police Station" id="prepoli"
+                                    onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br>
+                                State/ UT
+                                &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp;&emsp;
+                                <!-- <input type="text" placeholder="Enter State/ UT" id="prestate"  onkeypress="return /[a-z ]/i.test(event.key)" onkeyup="this.value = this.value.toUpperCase();"> -->
+                                <select name="state" id="prestate" class="form-control">
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                    <option value="Daman and Diu">Daman and Diu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Puducherry">Puducherry</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                </select>
+                                <br><br>
+                                PIN
+                                &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp;&emsp;&emsp;
+                                <input type="text" placeholder="Enter PIN" id="prepin" maxlength="6"
+                                    onkeypress="return validateNumber(event)">
+                                <br><br>
+                                Mobile Number
+                                &emsp; &emsp; &emsp; &emsp; &emsp;&ensp;
+                                <input type="text" placeholder="EnterMobileNumber" id="premon"
+                                    onkeypress="return validateNumber(event)" maxlength="10">
+                                <br><br>
+                                Telephone Number
+                                &emsp; &emsp;&emsp;&emsp;&emsp;
+                                <input type="text" placeholder="EnterTel-Number" id="preteln"
+                                    onkeypress="return validateNumber(event)" maxlength="11">
+                                <br><br>
+                                E-mail ID
+                                &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&nbsp;
+                                <input type="email" placeholder="Enter E-mail ID" id="preeid">
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b> 4.2 Is permanent address same as present address? </b></label>
+                                <input type="radio" name="4.2" id="4.2" onchange="preaddress()">Yes
+                                <input type="radio" name="4.2" id="4.2.1" onchange="preaddress()">No If no, provide
+                                details in Column 4 of Supplementary Form
+                                <br><br>
+                                Village or Town or City
+                                &emsp; &emsp; &emsp;
+                                <input type="text" placeholder="Enter City" id="prenocity" disabled
+                                    onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br>
+                                District
+                                &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp;&emsp;&emsp;
+                                <input type="text" placeholder="Enter District" id="prenodis" disabled
+                                    onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br>
+                                Police Station
+                                &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                                <input type="text" placeholder="Enter Police Station" id="prenopoli" disabled
+                                    onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br>
+                                State/ UT
+                                &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp;&emsp;
+                                <input type="text" placeholder="Enter State/ UT" id="prenostate" disabled
+                                    onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br>
+                                PIN
+                                &emsp; &emsp; &emsp;&emsp; &emsp; &emsp;&emsp; &emsp;&emsp;&emsp;
+                                <input type="text" placeholder="Enter PIN" id="prenopin" maxlength="6"
+                                    onkeypress="return validateNumber(event)" disabled>
+                                <br><br>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- </form> -->
+            </div>
+            <br>
+            <!-- End Session-4 -->
+            <!-- Start Session-5 -->
+            <div>
+                <center><button onclick="myFunction5()" class="button-34" style="width: 325px;">5. Emergency Contact
+                        Details</button></center>
+            </div>
+            <div id="main5" style="display:none;">
+                <!-- <form action=""> -->
+                <div id="sec=5" style=" width: 80%; padding-left:12% ;">
+                    <fieldset class="myclass">
+                        <legend>
+                            <h3 style="background-color:#00ccff;">5. Emergency Contact Details</h3>
+                        </legend>
+                        <div>
+                            Name and Address (Mention address only if different from present residential address)
+                            <input type="text" placeholder="Enter Address" id="emeadd"
+                                onkeypress="allowAlphaNumericSpace(event)"
+                                onkeyup="this.value = this.value.toUpperCase();" disabled>
+                            <br><br>
+                            Mobile Number
+                            &emsp; &emsp;
+                            <input type="text" placeholder="EnterMobileNumber" id="ememon" maxlength="10"
+                                onkeypress="return validateNumber(event)" disabled>
+                            <br><br>
+                            Telephone Number
+                            &emsp;
+                            <input type="text" placeholder="EnterTel-Number" id="emeteln" maxlength="11"
+                                onkeypress="return validateNumber(event)" disabled>
+                            <br><br>
+                            E-mail ID
+                            &emsp; &emsp; &emsp;&emsp;
+                            <input type="email" placeholder="Enter E-mail ID" id="emeeid" disabled>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- </form> -->
+            </div>
+            <br>
+            <!-- End Session-5 -->
+            <!-- Start Session-6 -->
+            <div>
+                <center><button onclick="myFunction6()" class="button-34" style="width: 325px;">6. Previous Passport
+                        Details</button></center>
+            </div>
+            <div id="main6" style="display:none;">
+                <!-- <form action=""> -->
+                <div id="sec=6" style=" width: 80%; padding-left:12% ;">
+                    <fieldset class="myclass">
+                        <legend>
+                            <h3 style="background-color:#00ccff;">6. Previous Passport/ Application Details</h3>
+                        </legend>
+                        <div>
+                            <div>
+                                <label for=""><b>6.1 Details of latest held/ existing/ lost/ damaged Ordinary Passport/
+                                        Identity Certificate</b></label>
+                                <br> <br>
+                                Passport/ Identity Certificate Number
+                                &nbsp;
+                                <input type="text" placeholder="Enter Number" id="prvcern" maxlength="8" disabled
+                                    onkeypress="allowAlphaNumeric(event)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br><br>
+                                Date of Issue (MM-DD-YYYY)
+                                &emsp; &emsp;
+                                <input type="date" id="prvdoi" name="dateone" disabled onclick="validDate()">
+                                <!-- <input type="date"  name="dateone" onclick="validDate()"> -->
+                                <br><br>
+                                Date of Expiry (MM-DD-YYYY)
+                                &emsp;&ensp;
+                                <input type="date" id="prvdoe" itemid="prvdoe" disabled>
+                                <br><br>
+                                Place of Issue
+                                &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                                <input type="text" placeholder="Enter Place" id="prvplace" disabled
+                                    onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                <br>
+                                If you have held/ hold any diplomatic/ official passport, provide details in Column 6 of
+                                Supplementary Form
+                            </div>
+                            <br>
+                            <div>
+                                <label for=""><b>6.2 Have you ever applied for passport, but not issued? </b></label>
+                                <input type="radio" name="6.2" id="6.2" onchange="passport()">Yes
+                                <input type="radio" name="6.2" id="6.2.1" onchange="passport()">No (If yes, provide the
+                                following details)
+                                <br> <br>
+                                File Number &nbsp;&nbsp;
+                                <input type="text" placeholder="Enter Number" id="prefilen" disabled maxlength="12"
+                                    onkeypress="allowAlphaNumeric(event)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                &emsp;&ensp;&emsp;&ensp;&emsp;&ensp;
+                                Month and Year of applying&emsp;
+                                <input type="month" id="premayo" disabled>
+                                <br><br>
+                                Name of passport office where applied
+                                <input type="text" placeholder="Enter Name" id="prepassoff" minlength="10"
+                                    maxlength="500" disabled onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- </form> -->
+            </div>
+            <br>
+            <!-- End Session-6 -->
+            <!-- Start Session-7 -->
+            <div>
+                <center><button onclick="myFunction7()" class="button-34" style="width: 325px;">7. Other
+                        details</button></center>
+            </div>
+            <div id="main7" style="display:none;">
+                <!-- <form action=""> -->
+                <div id="sec=7" style=" width: 80%; padding-left:12% ;">
+                    <fieldset class="myclass">
+                        <legend>
+                            <h3 style="background-color:#00ccff;">7. Other details</h3>
+                        </legend>
+                        <div>
+                            <div>
+                                <label for=""><b>7.1 Provide the following details if there are any criminal proceedings
+                                        pending against the applicant.</b></label><br><br>
+                                <label for="">7.1.1 Are any proceedings in respect of an offence alleged to have been
+                                    committed by
+                                    you pending before a criminal court in India?<br> &NonBreakingSpace;
+                                    If yes, fill Column 6.1 of Supplementary Form</label>
+                                <br>
+                                <input type="radio" name="7.1.1" id="7.1.1">Yes
+                                <input type="radio" name="7.1.1">No
+                                <br><br>
+                                <label for="">7.1.2 Has any warrant or summons for your appearance been issued & pending
+                                    before
+                                    a court under any law for the time being in force?<br> &NonBreakingSpace;
+                                    If yes, fill Column 6.2 of Supplementary Form</label>
+                                <br>
+                                <input type="radio" name="7.1.2" id="7.1.2">Yes
+                                <input type="radio" name="7.1.2">No
+                                <br><br>
+                                <label for="">7.1.3 Has a warrant for your arrest been issued by a court under any law
+                                    for the time
+                                    being in force?<br> &NonBreakingSpace;
+                                    If yes, fill Column 6.3 of Supplementary Form</label>
+                                <br>
+                                <input type="radio" name="7.1.3" id="7.1.3">Yes
+                                <input type="radio" name="7.1.3">No
+                                <br><br>
+                                <label for="">7.1.4 Has an order prohibiting your departure from India been made by any
+                                    court?
+                                    <br> &NonBreakingSpace;
+                                    If yes, fill Column 6.4 of Supplementary Form</label>
+                                <br>
+                                <input type="radio" name="7.1.4" id="7.1.4">Yes
+                                <input type="radio" name="7.1.4">No
+                            </div>
+                            <br><br>
+                            <div>
+                                <label for=""><b>7.2 Provide the following details if the applicant has been convicted
+                                        by a court in
+                                        India.</b></label><br><br>
+                                <label for="">7.2.1 Have you, at any time during the period of five years immediately
+                                    preceding the
+                                    date of this application, been convicted by a court in India for any offence
+                                    &NonBreakingSpace;&NonBreakingSpace;involving moral turpitude and sentenced in
+                                    respect thereof to imprisonment for
+                                    not less than two years?
+                                    <br> &NonBreakingSpace;
+                                    If yes, fill Column 6.5 of Supplementary Form</label>
+                                <br>
+                                <input type="radio" name="7.2.1" id="7.2.1">Yes
+                                <input type="radio" name="7.2.1">No
+                            </div>
+                            <br><br>
+                            <div>
+                                <label for=""><b>7.3 Provide the following details if the applicant has been
+                                        refused/denied passport</b></label><br><br>
+                                <label for="">7.3.1 Have you ever been refused/denied passport?
+                                    <br> &NonBreakingSpace;
+                                    If yes, fill Column 6.6 of Supplementary Form</label>
+                                <br>
+                                <input type="radio" name="7.3.1" id="7.3.1">Yes
+                                <input type="radio" name="7.3.1">No
+                                <br><br>
+                                <label for="">7.3.2 Has your passport ever been impounded?
+                                    <br> &NonBreakingSpace;
+                                    If yes, fill Column 6.7 of Supplementary Form</label>
+                                <br>
+                                <input type="radio" name="7.3.2" id="7.3.2">Yes
+                                <input type="radio" name="7.3.2">No
+                                <br><br>
+                                <label for="">7.3.3 Has your passport ever been revoked?
+                                    <br> &NonBreakingSpace;
+                                    If yes, fill Column 6.8 of Supplementary Form</label>
+                                <br>
+                                <input type="radio" name="7.3.3" id="7.3.3">Yes
+                                <input type="radio" name="7.3.3">No
+                            </div>
+                            <br><br>
+                            <div>
+                                <label for=""><b>7.4 Provide the following details if applicant has applied for or been
+                                        granted foreign
+                                        citizenship.</b></label><br><br>
+                                <label for="">7.4.1 Have you ever been granted citizenship by any other region/country?
+                                    <br> &NonBreakingSpace;
+                                    If yes, fill Column 6.9 of Supplementary Form</label>
+                                <br>
+                                <input type="radio" name="7.4.1" id="7.4.1">Yes
+                                <input type="radio" name="7.4.1">No
+                                <br><br>
+                                <label for="">7.4.2 Have you ever held the passport of any other region/country at any
+                                    time?
+                                    <br> &NonBreakingSpace;
+                                    If yes, fill Column 6.10 of Supplementary Form</label>
+                                <br>
+                                <input type="radio" name="7.4.2" id="7.4.2">Yes
+                                <input type="radio" name="7.4.2">No
+                                <br><br>
+                                <label for="">7.4.3 Have you ever surrendered your Indian passport?
+                                    <br> &NonBreakingSpace;
+                                    If yes, fill Column 6.11 of Supplementary Form</label>
+                                <br>
+                                <input type="radio" name="7.4.3" id="7.4.3">Yes
+                                <input type="radio" name="7.4.3">No
+                                <br><br>
+                                <label for="">7.4.4 Have you ever applied for renunciation of Indian citizenship?
+                                    <br> &NonBreakingSpace;
+                                    If yes, fill Column 6.12 of Supplementary Form</label>
+                                <br>
+                                <input type="radio" name="7.4.4" id="7.4.4">Yes
+                                <input type="radio" name="7.4.4">No
+                                <br> &NonBreakingSpace;
+
+                            </div>
+                            <div>
+                                <label for=""><b>7.5 Provide the following details if applicant has returned to India on
+                                        Emergency Certificate.</b></label><br><br>
+                                <label for="">7.5.1 Have you ever returned to India on Emergency Certificate (EC)?
+                                    <br> &NonBreakingSpace;
+                                    If yes, fill Column 6.13 of Supplementary Form</label>
+                                <br>
+                                <input type="radio" name="7.5.1" id="7.5.1">Yes
+                                <input type="radio" name="7.5.1">No
+                                <br><br>
+                                <label for="">7.5.2 Have you ever been deported from any country?
+                                    <br> &NonBreakingSpace;
+                                    If yes, was the cost borne by the Government of India and if so, has the
+                                    same been refunded?</label>
+                                <br>
+                                <input type="radio" name="7.5.2" id="7.5.2">Yes
+                                <input type="radio" name="7.5.2">No
+                                <br><br>
+                                <label for="">7.5.3 Have you ever been repatriated from any country back to India?
+                                    <br> &NonBreakingSpace;
+                                    If yes, was the cost borne by the Government of India and if so, has the
+                                    same been refunded?</label>
+                                <br>
+                                <input type="radio" name="7.5.3" id="7.5.3">Yes
+                                <input type="radio" name="7.5.3">No
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- </form> -->
+            </div>
+            <br>
+            <!-- End Session-7 -->
+            <!-- Start Session-8 -->
+            <div>
+                <center><button onclick="myFunction8()" class="button-34" style="width: 325px;">8. Fee Details </button>
+                </center>
+            </div>
+            <div id="main8" style="display:none;">
+                <!-- <form action=""> -->
+                <div id="sec=8" style=" width: 80%; padding-left:12% ;">
+                    <fieldset class="myclass">
+                        <legend>
+                            <h3 style="background-color:#00ccff;">8. Fee Details </h3>
+
+                        </legend>
+                        <div>
+                            <div>
+                                <p> (Not to be filled by applicants submitting the application at Passport Seva Kendra)
+                                </p>
+                                <label for="">8.1 Fee amount in (Rs)</label>&nbsp;
+                                <input type="text" id="feeamo" onkeypress="return validateNumber(event)">
+
+                            </div>
+                            <br>
+                            <div>
+                                <label for="">8.2 If paid by Demand Draft (DD), provide the following details</label>
+                                <br><br>&nbsp;DD Number &nbsp;
+                                <input type="text" id="feeddnum" onkeypress="return validateNumber(event)">
+                                <br><br> DD Issue Date <input type="date" id="feeddisd">
+                                &nbsp; &nbsp;&nbsp;
+                                DD Expiry Date <input type="date" id="feeddexd">
+                                <br><br>
+                                Bank Name &emsp;<input type="text" placeholder="Enter Bankname" id="frrbname"
+                                    style="text-transform:uppercase" onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                                &emsp;
+                                Branch &emsp;&ensp; <input type="text" placeholder="Enter Branch" id="feebra"
+                                    style="text-transform:uppercase" onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- </form> -->
+            </div>
+            <br>
+            <!-- End Session-8 -->
+            <!-- Start Session-9 -->
+            <div>
+                <center><button onclick="myFunction9()" class="button-34" style="width: 325px;">9. Enclosures </button>
+                </center>
+            </div>
+            <div id="main9" style="display:none;">
+                <!-- <form action=""> -->
+                <div id="sec=9" style=" width: 80%; padding-left:12% ;">
+                    <fieldset class="myclass">
+                        <legend>
+                            <h3 style="background-color:#00ccff;">9. Enclosures </h3>
+                        </legend>
+                        <div>
+                            <div>
+                                1.<input type="text"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                6.<input type="text"> &nbsp; &nbsp;
+                                <br> &nbsp; &nbsp;
+                                <input type="file" accept="image/x-png,image/gif,image/jpeg">
+                                <input type="file" accept="image/x-png,image/gif,image/jpeg">
+                                <br><br>
+                                2.<input type="text"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                7.<input type="text"> &nbsp; &nbsp;
+                                <br> &nbsp; &nbsp;
+                                <input type="file" accept="image/x-png,image/gif,image/jpeg">
+                                <input type="file" accept="image/x-png,image/gif,image/jpeg">
+                                <br><br>
+                                3.<input type="text"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                8.<input type="text"> &nbsp; &nbsp;
+                                <br> &nbsp; &nbsp;
+                                <input type="file" accept="image/x-png,image/gif,image/jpeg">
+                                <input type="file" accept="image/x-png,image/gif,image/jpeg">
+                                <br><br>
+                                4.<input type="text"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                9.<input type="text"> &nbsp; &nbsp;
+                                <br> &nbsp; &nbsp;
+                                <input type="file" accept="image/x-png,image/gif,image/jpeg">
+                                <input type="file" accept="image/x-png,image/gif,image/jpeg">
+                                <br><br>
+                                5.<input type="text"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+                                10.<input type="text"> &nbsp; &nbsp;
+                                <br> &nbsp; &nbsp;
+                                <input type="file" accept="image/x-png,image/gif,image/jpeg">
+                                <input type="file" accept="image/x-png,image/gif,image/jpeg">
+
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- </form> -->
+            </div>
+            <br>
+            <!-- End Session-9 -->
+            <!-- Start Session-10 -->
+            <div>
+                <center><button onclick="myFunction10()" class="button-34" style="width: 325px;">10. Self
+                        Declaration</button></center>
+            </div>
+            <div id="main10" style="display:none;">
+                <!-- <form action=""> -->
+                <div id="sec=10" style=" width: 80%; padding-left:12% ;">
+                    <fieldset class="myclass">
+                        <legend>
+                            <h3 style="background-color:#00ccff;">10. Self Declaration</h3>
+                        </legend>
+                        <div>
+                            <div style="text-align: justify;">
+                                <p>I owe allegiance to the sovereignty, unity & integrity of India, and have not
+                                    voluntarily acquired citizenship or
+                                    travel document of any other country. I have not lost, surrendered or been deprived
+                                    of the citizenship of India.
+                                    I have not contravened any of the conditions relating to the possession and use of
+                                    an Indian passport.
+                                </p>
+                                <p>I affirm that the information and particulars given by me in this form are true and
+                                    correct. I further state that I
+                                    am not suppressing any material information in this regard. I further affirm that
+                                    the enclosures and documentary
+                                    proof submitted in support of my application for an Indian passport are authentic
+                                    and solely pertain to me and
+                                    I am fully responsible for the accuracy of the same. I am liable to be penalized or
+                                    prosecuted if found otherwise.
+                                    I am aware that under the Passports Act, 1967 it is a criminal offence to furnish
+                                    any false information or to
+                                    suppress any material information with a view to obtaining passport or travel
+                                    document.</p>
+                                <p>I have read and understood the contents of the above and by submitting this form
+                                    certify that all the information
+                                    submitted by me in the form is bonafide.</p>
+
+                                Place <input type="text" id="sdplace" onkeypress="return /[a-z ]/i.test(event.key)"
+                                    onkeyup="this.value = this.value.toUpperCase();"> <br>
+                                <div>
+                                    <br>
+                                    Signature/ Left Hand Thumb
+                                    Impression of Applicant
+                                    <br>
+                                    <input type="file" id="sdsig" accept="image/x-png,image/gif,image/jpeg">
+                                </div>
+                                <br>
+                                Date (DD-MM-YYYY)
+                                <!-- <input type="text" id="sddate" onclick="datecheck()" > -->
+                                <p>
+                                    <script> document.write(new Date().toLocaleDateString()); </script>
+                                </p>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- </form> -->
+            </div>
+            <br>
+            <!-- End Session-10 -->
+            <!-- Start remember or error Session -->
+            <div>
+                <center><button onclick="remember()" class="button-34" style="width: 325px;">Remember</button></center>
+            </div>
+            <div id="remember" style="display:block;">
+                <!-- <form action=""> -->
+                <div id="rem" style=" width: 80%; padding-left:12% ;">
+                    <fieldset class="myclass">
+                        <legend>
+                            <h3 style="background-color:#00ccff;">Remember Field</h3>
+                        </legend>
+                        <div>
+                            <ul>
+                                <!-- Session-1 -->
+                                <span id="filenum"></span>
+                                <!-- <li id="filenum"></li> -->
+                                <!-- <li id="filenum" class="errmsg"></li> -->
+                                <li class="errmsg" id="service"><a href="#1.1">
+                                        <p>1.1 Applying for</p>
+                                    </a></li>
+                                <span id="1.1pic"></span>
+                                <!-- <li id="1.1pic" class="errmsg"><a href="#srpic"><p>1.1 Please Upload Passport photo </p></a></li> -->
+                                <li id="1.2reiss" class="errmsg"><a href="#1.2">
+                                        <p>1.2 Please select re-issue</p>
+                                    </a></li>
+                                <span id="1.3sig"></span>
+                                <!-- <li id="1.3sig"  class="errmsg"><a href="#srsig"><p>1.3 Please Upload sign</p></a></li> -->
+                                <li id="1.3rereason" class="errmsg" style.display="block" ;><a href="#1.3">
+                                        <p>1.3 Please select specify reason</p>
+                                    </a></li>
+                                <!-- <li id="1.3other" class="errmsg" ><a href="#other"><p>1.3 Please Enter Other reason</p></a></li> -->
+                                <li id="1.4reapp" class="errmsg"><a href="#1.4">
+                                        <p>1.4 Please select Application</p>
+                                    </a></li>
+                                <li id="1.5repb" class="errmsg"><a href="#1.5">
+                                        <p>1.5 Please select Passport Booklet </p>
+                                    </a></li>
+                                <li id="1.6rereq" class="errmsg"><a href="#1.6">
+                                        <p>1.6 Please select Required </p>
+                                    </a></li>
+                                <!-- Session-2 -->
+                                <li id="2.1name" class="errmsg"><a href="#appname">
+                                        <p>2.1.1 Please Enter app Name</p>
+                                    </a></li>
+                                <li id="2.1.1name" class="errmsg"><a href="#appmidname">
+                                        <p>2.1.2 Please Enter app mid Name</p>
+                                    </a></li>
+                                <li id="2.1.2name" class="errmsg"><a href="#appsurname">
+                                        <p>2.1.3 Please Enter app SureName</p>
+                                    </a></li>
+                                <li id="2.2ali" class="errmsg"><a href="#2.2">
+                                        <p>2.2 Please select Yes or No </p>
+                                    </a></li>
+                                <li id="2.3yn" class="errmsg"><a href="#2.3">
+                                        <p>2.3 Please select Yes or No</p>
+                                    </a></li>
+                                <!-- <span id="2.4date"></span> -->
+                                <li id="2.4date" class="errmsg"><a href="#appdate">
+                                        <p>2.4 Please Enter Date</p>
+                                    </a></li>
+                                <span class="error" id="lblError" style="background-color: red;"></span>
+                                <li id="2.5.1pob" class="errmsg"><a href="#appvillage">
+                                        <p>2.5 Please Enter Village</p>
+                                    </a></li>
+                                <span id="2.5.2pob"></span>
+                                <span id="2.5.3pob"></span>
+                                <span id="2.5.4pob"></span>
+                                <!-- <li  id="2.5.2pob" class="errmsg"><a href="#appdis"><p>2.5 Please Enter District</p></a></li>
+                                <li  id="2.5.3pob" class="errmsg"><a href="#appstate"><p >2.5 Please Enter State</p></a></li>
+                                <li  id="2.5.4pob" class="errmsg"><a href="#appcoun"><p>2.5 Please Enter Country</p></a></li> -->
+                                <li id="2.6Gender" class="errmsg"><a href="#2.6">
+                                        <p>2.6 Please select Gender </p>
+                                    </a></li>
+                                <li id="2.7ms" class="errmsg"><a href="#2.7">
+                                        <p>2.7 Please select Marital Status </p>
+                                    </a></li>
+                                <li id="2.8coi" class="errmsg"><a href="#2.8">
+                                        <p>2.8 Please select Citizenship of India </p>
+                                    </a></li>
+                                <span id="2.9pan"></span>
+                                <span id="2.10voter"></span>
+                                <!-- <li  id="2.9pan" class="errmsg"><a href="#apppan"><p>2.9 Please Enter PAN</p></a></li>
+                                <li  id="2.10voter" class="errmsg"><a href="#appvoter"><p>2.10 Please Enter Voter ID</p></a></li> -->
+                                <li id="2.11et" class="errmsg"><a href="#2.11">
+                                        <p>2.11 Please select Employment Type </p>
+                                    </a></li>
+                                <li id="2.12orgname" class="errmsg"><a href="#apporg">
+                                        <p>2.12 Please Enter Organization Name</p>
+                                    </a></li>
+                                <li id="2.13minor" class="errmsg"><a href="#2.13">
+                                        <p>2.13 Please select Yes or No </p>
+                                    </a></li>
+                                <li id="2.14eq" class="errmsg"><a href="#2.14">
+                                        <p>2.14 Please select Educational Qualification </p>
+                                    </a></li>
+                                <li id="2.15ecr" class="errmsg"><a href="#2.15">
+                                        <p>2.15 Please select Yes or No </p>
+                                    </a></li>
+                                <li id="2.16dismark" class="errmsg"><a href="#appdismark">
+                                        <p>2.16 Please Enter Distinguishing Mark</p>
+                                    </a></li>
+                                <span id="2.17aadhar"></span>
+                                <!-- <li id="2.17aadhar" class="errmsg"><a href="#appaadhaar"><p>2.17 Please Enter Aadhaar Number</p></a></li> -->
+                                <!-- Session-3 -->
+                                <li id="3.1.1fname" class="errmsg"><a href="#famfname">
+                                        <p>3.1 Please Enter FatherName</p>
+                                    </a></li>
+                                <li id="3.1.2fmname" class="errmsg"><a href="#famfmname">
+                                        <p>3.1 Please Enter Father Middle Name</p>
+                                    </a></li>
+                                <li id="3.1.3fsname" class="errmsg"><a href="#famfsname">
+                                        <p>3.1 Please Enter Father Surame</p>
+                                    </a></li>
+                                <li id="3.2.1mname" class="errmsg"><a href="#fammname">
+                                        <p>3.2 Please Enter MotherName</p>
+                                    </a></li>
+                                <li id="3.2.2mmname" class="errmsg"><a href="#fammmname">
+                                        <p>3.2 Please Enter Mother Middle Name</p>
+                                    </a></li>
+                                <li id="3.2.3msname" class="errmsg"><a href="#fammsname">
+                                        <p>3.2 Please Enter Mother Surame</p>
+                                    </a></li>
+                                <!-- <li  id="3.2.1mname" class="errmsg"><a href="#fammname"><p>3.2 Please Enter MotherName</p></a></li>
+                                <li id="3.2.2mmname" class="errmsg"><a href="#fammmname"><p>3.2 Please Enter Mother Middle Name</p></a></li>
+                                <li id="3.2.3msname" class="errmsg"><a href="#fammsname"><p>3.2 Please Enter Mother Surame</p></a></li> -->
+                                <li id="3.3.1lname" class="errmsg"><a href="#famlname">
+                                        <p>3.3 Please Enter Legal Guardian's Name</p>
+                                    </a></li>
+                                <li id="3.3.2lmname" class="errmsg"><a href="#famlmname">
+                                        <p>3.3 Please Enter Legal Guardian's Middle Name</p>
+                                    </a></li>
+                                <li id="3.3.3lsname" class="errmsg"><a href="#famlsname">
+                                        <p>3.3 Please Enter Legal Guardian's Surame</p>
+                                    </a></li>
+                                <li id="3.4.1sname" class="errmsg"><a href="#famsname">
+                                        <p>3.4 Please Enter Spouse'sName</p>
+                                    </a></li>
+                                <li id="3.4.2smname" class="errmsg"><a href="#famsmname">
+                                        <p>3.4 Please Enter Spouse's Middle Name</p>
+                                    </a></li>
+                                <li id="3.4.3ssname" class="errmsg"><a href="#famssname">
+                                        <p>3.4 Please Enter Spouse's Surame</p>
+                                    </a></li>
+                                <!-- Session-4 -->
+                                <span id="4.1str"></span>
+                                <!-- <li id="4.1str" class="errmsg"><a href="#prestr"><p >4.1 Please Enter House No. and Street Name </p></a></li> -->
+                                <li id="4.1city" class="errmsg"><a href="#precity">
+                                        <p>4.1 Please Enter Village or Town or City </p>
+                                    </a></li>
+                                <li id="4.1dis" class="errmsg"><a href="#predis">
+                                        <p>4.1 Please Enter District</p>
+                                    </a></li>
+                                <li id="4.1poli" class="errmsg"><a href="#prepoli">
+                                        <p>4.1 Please Enter Police Station </p>
+                                    </a></li>
+                                <li id="4.1state" class="errmsg"><a href="#prestate">
+                                        <p>4.1 Please Enter State/ UT </p>
+                                    </a></li>
+                                <li id="4.1pin" class="errmsg"><a href="#prepin">
+                                        <p>4.1 Please Enter PIN</p>
+                                    </a></li>
+                                <li id="4.1mon" class="errmsg"><a href="#premon">
+                                        <p>4.1 Please Enter Mobile Number </p>
+                                    </a></li>
+                                <li id="4.1teln" class="errmsg"><a href="#preteln">
+                                        <p>4.1 Please Enter Telephone Number </p>
+                                    </a></li>
+                                <span id="4.1eid"></span>
+                                <!-- <li id="4.1eid" class="errmsg"><a href="#preeid"><p >4.1 Please Enter E-mail</p></a></li> -->
+                                <li id="4.2add" class="errmsg"><a href="#4.2">
+                                        <p>4.2 Please Select Yes or No</p>
+                                    </a></li>
+                                <!-- Session-5 -->
+                                <li id="5emeadd" class="errmsg"><a href="#emeadd">
+                                        <p>5 Please Enter Address</p>
+                                    </a></li>
+                                <li id="5ememon" class="errmsg"><a href="#ememon">
+                                        <p>5 Please Enter Mobile Number </p>
+                                    </a></li>
+                                <li id="5emeteln" class="errmsg"><a href="#emeteln">
+                                        <p>5 Please Enter Telephone Number</p>
+                                    </a></li>
+                                <li id="5emeeid" class="errmsg"><a href="#emeeid">
+                                        <p>5 Please Enter E-mail</p>
+                                    </a></li>
+                                <!-- Session-6 -->
+                                <span id="6.1num"></span>
+                                <!-- <li id="6.1num" class="errmsg"><a href="#prvcern"><p >6.1 Please Enter Certificate Number</p></a></li> -->
+                                <span id="6.1doi"></span>
+                                <!-- <span id="6.1doe"></span> -->
+                                <!-- <li id="6.1doi" class="errmsg"><a href="#prvdoi"><p >6.1 Please Enter Date of Issue </p></a></li> -->
+                                <!-- <li id="6.1doe" class="errmsg"><a href="#prvdoe"><p  >6.1 Please Enter Date of Expiry</p></a></li> -->
+                                <li id="6.1place" class="errmsg"><a href="#prvplace">
+                                        <p>6.1 Please Enter Place</p>
+                                    </a></li>
+                                <li id="6.2issued" class="errmsg"><a href="#6.2">
+                                        <p>6.2 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="6.2num" class="errmsg"><a href="#prefilen">
+                                        <p>6.2 Please Enter File Number </p>
+                                    </a></li>
+                                <li id="6.2mayo" class="errmsg"><a href="#premayo">
+                                        <p>6.2 Please Enter Month and Year of applying</p>
+                                    </a></li>
+                                <li id="6.2passoff" class="errmsg"><a href="#prepassoff">
+                                        <p>6.2 Please Enter passport office</p>
+                                    </a></li>
+                                <!-- Session-7 -->
+                                <li id="7.1yn" class="errmsg"><a href="#7.1.1">
+                                        <p>7.1.1 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.2yn" class="errmsg"><a href="#7.1.2">
+                                        <p>7.1.2 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.3yn" class="errmsg"><a href="#7.1.3">
+                                        <p>7.1.3 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.4yn" class="errmsg"><a href="#7.1.4">
+                                        <p>7.1.4 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.5yn" class="errmsg"><a href="#7.2.1">
+                                        <p>7.2.1 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.6yn" class="errmsg"><a href="#7.3.1">
+                                        <p>7.3.1 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.7yn" class="errmsg"><a href="#7.3.2">
+                                        <p>7.3.2 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.8yn" class="errmsg"><a href="#7.3.3">
+                                        <p>7.3.3 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.9yn" class="errmsg"><a href="#7.4.1">
+                                        <p>7.4.1 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.10yn" class="errmsg"><a href="#7.4.2">
+                                        <p>7.4.2 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.11yn" class="errmsg"><a href="#7.4.3">
+                                        <p>7.4.3 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.12yn" class="errmsg"><a href="#7.4.4">
+                                        <p>7.4.4 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.13yn" class="errmsg"><a href="#7.5.1">
+                                        <p>7.5.1 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.14yn" class="errmsg"><a href="#7.5.2">
+                                        <p>7.5.2 Please Select Yes or No </p>
+                                    </a></li>
+                                <li id="7.15yn" class="errmsg"><a href="#7.5.3">
+                                        <p>7.5.3 Please Select Yes or No </p>
+                                    </a></li>
+                                <!-- Session-8 -->
+                                <li id="8amo" class="errmsg"><a href="#feeamo">
+                                        <p>8 Please Enter Fee amount</p>
+                                    </a></li>
+                                <li id="8ddnum" class="errmsg"><a href="#feeddnum">
+                                        <p>8 Please Enter DD Number </p>
+                                    </a></li>
+                                <li id="8ddissd" class="errmsg"><a href="#feeddisd">
+                                        <p>8 Please Enter DD Issue Date</p>
+                                    </a></li>
+                                <li id="8ddexd" class="errmsg"><a href="#feeddexd">
+                                        <p>8 Please Enter DD Expiry Date</p>
+                                    </a></li>
+                                <li id="8banme" class="errmsg"><a href="#frrbname">
+                                        <p>8 Please Enter Bank Name </p>
+                                    </a></li>
+                                <li id="8bra" class="errmsg"><a href="#feebra">
+                                        <p>8 Please Enter Branch </p>
+                                    </a></li>
+                                <!-- Session-9 -->
+                                <!-- Session-10 -->
+                                <li id="10place" class="errmsg"><a href="#sdplace">
+                                        <p>10 Please Enter Place</p>
+                                    </a></li>
+                                <li id="10sig" class="errmsg"><a href="#sdsig">
+                                        <p>10 Please Upload Signature </p>
+                                    </a></li>
+                                <!-- <li id="10date" class="errmsg"><a href="#sddate"><p >10 Please Enter Date</p></a></li> -->
+                            </ul>
+                        </div>
+                    </fieldset>
+                </div>
+                <!-- </form> -->
+            </div>
+            <!-- End remember or error Session -->
+            <br>
+
+            <div>
+                <center>
+                    <input class="button-34" type="submit" value="Submit it!" style="width: 160px;">
+                    <input class="button-34" type="reset" value="Reset" style="width: 160px;">
+                </center>
+                <!-- <input type="button" value="Top" onclick="topFunction()"  class="button-34" > -->
+                <input type="button" value="Top" onclick="topFunction()" class="button-34"
+                    style="float: right; width: 100px;">
+            </div>
+        </div>
+
+    </form>
+
+</body>
+
+</html>
